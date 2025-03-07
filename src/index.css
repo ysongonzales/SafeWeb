@@ -624,6 +624,7 @@ li {
         font-size: 0.9rem;
         padding: 10px;
         text-align: center;
+        z-index: 700;
     }
 
     #income-section, #expenses-section, #goal-section {
