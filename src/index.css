@@ -1,0 +1,657 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.app-header {
+    min-width: 100vw;
+    height: 10vh;
+    background-color: #00D439;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+}
+
+.header {
+    color: white;
+    font-size: 28px;
+    margin-left: 2vw;
+}
+
+main {
+    min-width: 100vw;   
+    height: 80vh;
+    background-color: #e3e3e3;
+    display: flex;
+}
+
+aside {
+    background-color: #FAF9F6;
+    width: 20%;
+    height: 100%;
+    padding-top: .2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-button {
+    width: 100%;
+    height: 15%;
+    background-color: #FAF9F6;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+}
+
+.nav-button:hover {
+    background-color: #efefef;
+}
+
+.nav-button p {
+    text-align: center;
+}
+
+.nav-button.active {
+    background-color: #00D439;
+    color: white;
+    font-weight: bold;
+}
+
+.nav-button.active:hover {
+    background-color: #03b131;
+}
+
+aside .nav-button:last-child {
+    background-color: red;
+    margin-top: auto;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+aside .nav-button:last-child:hover {
+    background-color: rgb(221, 0, 0);
+}
+
+section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.total-container {
+    width: 90%;
+    height: 20%;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.total-tab {
+    width: 32%;
+    height: 100%;
+    background-color: #FAF9F6;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tab-icon {
+    height: 60px;
+}
+
+.tab-text  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.tab-text .tab-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.tab-text p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.inner-container {
+    width: 90%;
+    height: 70%;
+    /* background-color: #FAF9F6; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.inner-tab {
+    height: 100%;
+    background-color: #FAF9F6;
+    border-radius: 10px;
+    flex-wrap: wrap;
+}
+
+.goals-container {
+    width: 35%;
+    margin-right: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.title-container {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+.title-container .tab-icon {
+    height: 32px;
+    margin-right: 5px;
+}
+
+.goal-header {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.chart-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.chart-container #monthlyChart {
+    flex: 1;
+}
+
+.app-footer {
+    background-color: #2e2e2e;
+    color: white;
+    padding-top: 1.5vh;
+    text-align: center;
+    height: 10vh;
+    min-width: 100vw;
+    z-index: 1000;
+}
+
+section h3 {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.add-tracker-form {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+}
+
+.form-input {
+    flex: 1;
+    padding: 0.8rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.form-input:focus {
+    border-color: #2ecc71;
+    outline: none;
+}
+
+.form-container {
+    width: 50%;
+    height: 100%;
+    background-color: #FAF9F6;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    margin-left: 2.5%;
+}
+
+.goal-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 5%;
+    gap: 1rem;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.history-btn, .edit-btn, .btn {
+    background-color: #27ae60;
+    color: white;
+    padding: 1.2rem 0;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 1rem;
+    flex: 1;
+}
+
+.history-btn:hover, .edit-btn:hover, .btn:hover {
+    background-color: #2ecc71;
+}
+
+#income-section, #expenses-section, #goal-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 2%;
+}
+
+.goal-list {
+    width: 90%;
+    flex: 1;
+    background-color: #efefef;
+    margin: 5%;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.goal-list {
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.goal-list::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Chrome, Edge, Safari */
+}
+
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #FAF9F6;
+    width: 90%;
+    min-height: 20%;
+    font-size: 1.05rem;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    position: relative;
+    overflow: visible;
+}
+
+.tooltip-text {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: black;
+    color: white;
+    padding: 8px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: max-content;
+    max-width: 200px;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.1s ease-in-out;
+    white-space: pre-line;
+    z-index: 10;
+}
+
+.card:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+.goals-container .goal-list .card {
+    min-height: 30%;
+    font-size: 0.8rem;
+}
+
+.chart-container h3 {
+    margin-top: 5%;
+}
+
+.edit {
+    display: none;
+}
+
+.cancel, #reset-history, #reset-history-expenses, #reset-history-goals {
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding-left: auto;
+    padding-right: auto;
+}
+
+.cancel, #reset-history, #reset-history-expenses, #reset-history-goals {
+    background-color: rgb(221, 0, 0);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 400px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-content::-webkit-scrollbar {
+    width: 0;
+    display: none;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.month-group {
+    margin-top: 10px;
+    padding: 10px;
+    background: #e0e0e0;
+    border-radius: 5px;
+    text-align: left; /* Keep entries left-aligned */
+}
+
+.month-group h3 {
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background: #f8f8f8;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#noDataMessage {
+    font-size: 18px;
+    color: #777;
+    font-weight: bold;
+    margin-top: 10%;
+}
+
+.second-btn {
+    margin-top: 0;
+}
+
+.expense-scnd-btn .btn{
+    font-size: 1.05rem;
+}
+
+#dashboard-title {
+    margin-top: 0;
+}
+
+.burger-menu {
+    display: none;
+}
+
+.policy {
+    cursor: pointer;
+    text-decoration: underline;
+    color: white;
+}
+
+/* General Mobile Adjustments */
+@media (max-width: 768px) {
+    * {
+        overflow-y: auto;
+    }
+    body {
+        flex-direction: column;
+        overflow-x: hidden;
+    }
+
+    /* Header */
+    .app-header {
+        height: 8vh;
+        font-size: 1.2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        position: fixed;
+    }
+
+    h1.header {
+        font-size: 1.2rem;
+        margin-left: 5%;
+    }
+
+    /* Burger Menu */
+    .burger-menu {
+        display: block;
+        font-size: 3rem;
+        cursor: pointer;
+        color: white;
+        margin: 0;
+        margin-bottom: 2%;
+    }
+
+    aside {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 60%;
+        height: 100%;
+        background: #FAF9F6;
+        transition: left 0.3s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10vh;
+        box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+        z-index: 1000;
+    }
+
+    aside.show {
+        left: 0;
+    }
+
+    .nav-button {
+        height: auto;
+        padding: 12px;
+        font-size: 1.2rem;
+    }
+
+    main {
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* Sections - Stack content */
+    section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 5%;
+        width: 100%;
+        margin-top: 12%;
+    }
+
+    /* Ensure income, expenses, and goals sections stack properly */
+    .inner-container {
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .goals-container {
+        width: 100vw;
+        border-radius: 10%;
+        margin-top: 5%;
+        padding: 0;
+    }
+
+    /* Goal List - Ensure Full Width */
+    .goal-list {
+        max-height: 300px;
+        width: 85%;
+        overflow-y: auto;
+        margin-left: 7%;
+    }
+
+    .card {
+        width: 100%; /* Ensures goal cards take full width */
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    #noDataMessage {
+        margin-bottom: 10%;
+    }
+
+    /* Total Container Fix */
+    .total-container {
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        gap: 10px;
+    }
+
+    .total-tab {
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    /* Chart Container Fix */
+    .chart-container {
+        width: 100%;
+        flex-direction: column;
+        overflow-x: auto;
+    }
+
+    /* Form Adjustments */
+    .form-container {
+        width: 100%;
+        margin: auto;
+        padding: 15px;
+    }
+
+    .add-tracker-form {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .btn-container button {
+        width: 48%; /* Makes buttons align properly instead of stacking */
+        margin-bottom: 10px;
+    }
+
+    /* Footer */
+    .app-footer {
+        font-size: 0.9rem;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #income-section, #expenses-section, #goal-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        padding: 2%;
+        overflow-y: auto;
+        height: 50vh;
+
+        .goal-container {
+            width: 100%;
+            margin-bottom: 3%;
+
+            .goal-list {
+                width: 90%;
+                margin-left: 5%;
+        
+            }
+        }
+    }
+
+    .card {
+        width: 90%;
+
+        span {
+            top: 0;
+        }
+    }
+}
