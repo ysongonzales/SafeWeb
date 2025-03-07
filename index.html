@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/icon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="./src/index.css">
-    <script type="module" src="./node_modules/chart.js/dist/chart.umd.js"></script>
-    <script src="./node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+    <link rel="shortcut icon" href="assets/icon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="src/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>SAFE Financial Planner</title>
 </head>
 <body>
@@ -27,21 +27,21 @@
         <section id="dashboard-section">
             <div class="total-container">
                 <div class="total-tab total-income">
-                    <img src="./assets/income.png" alt="income icon" class="tab-icon">
+                    <img src="assets/income.png" alt="income icon" class="tab-icon">
                     <div class="tab-text">
                         <h2 class="tab-header">Total Income</h2>
                         <p id="totalIncome"></p>
                     </div>
                 </div>
                 <div class="total-tab total-expenses">
-                    <img src="./assets/expenses.png" alt="expenses icon" class="tab-icon">
+                    <img src="assets/expenses.png" alt="expenses icon" class="tab-icon">
                     <div class="tab-text">
                         <h2 class="tab-header">Total Expenses</h2>
                         <p id="totalExpenses"></p>
                     </div>
                 </div>
                 <div class="total-tab total-savings">
-                    <img src="./assets/savings.png" alt="savings icon" class="tab-icon">
+                    <img src="assets/savings.png" alt="savings icon" class="tab-icon">
                     <div class="tab-text">
                         <h2 class="tab-header">Total Savings</h2>
                         <p id="totalSavings"></p>
@@ -52,7 +52,7 @@
             <div class="inner-container">
                 <div class="goals-container inner-tab">
                     <div class="title-container">
-                        <img src="./assets/goal.png" alt="goal icon" class="tab-icon">
+                        <img src="assets/goal.png" alt="goal icon" class="tab-icon">
                         <h2 class="goal-header">Goals</h2>
                     </div>
                     <div class="goal-list" id="dashboard-goal">
@@ -150,7 +150,7 @@
         <section id="goal-section">
             <div class="goal-container inner-tab">
                 <div class="title-container">
-                    <img src="./assets/goal.png" alt="goal icon" class="tab-icon">
+                    <img src="assets/goal.png" alt="goal icon" class="tab-icon">
                     <h2 class="goal-header">Goals</h2>
                 </div>
                 <div class="goal-list" id="section-goal-list">
@@ -184,10 +184,10 @@
             <a class="policy" id="terms">Terms of Service</a>
         </p>
     </footer>
-    <script type="module" src="./src/dashboard.js"></script>
-    <script type="module" src="./src/sidebar-navigation.js"></script>
-    <script type="module" src="./src/income.js"></script>
-    <script type="module" src="./src/expenses.js"></script>
-    <script type="module" src="./src/goals.js"></script>
+    <script type="module" src="src/dashboard.js"></script>
+    <script type="module" src="src/sidebar-navigation.js"></script>
+    <script type="module" src="src/income.js"></script>
+    <script type="module" src="src/expenses.js"></script>
+    <script type="module" src="src/goals.js"></script>
 </body>
 </html>
